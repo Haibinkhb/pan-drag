@@ -1,0 +1,41 @@
+.title {
+  text-align: center;
+  color: $orange;
+  padding: 10px 0;
+  border-bottom: 2px solid $orange;
+  margin-bottom: 5px;
+}
+.component-list {
+  display: grid;
+  padding: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  // grid-template-rows: 33.33% 33.33% 33.33%;
+  .component-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px 0;
+    cursor: pointer;
+    min-height: 70px;
+    transition: all 0.3s ease-in-out;
+    justify-content: space-between;
+    &:hover {
+      background: linear-gradient(90deg, $orange, lighten($orange, 20%));
+      .text,
+      .icon {
+        color: #fff;
+      }
+    }
+    .text {
+      color: #000;
+      font-size: 14px;
+    }
+    .icon {
+      color: lighten($orange, 10%);
+    }
+  }
+}
